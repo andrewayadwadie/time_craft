@@ -1,0 +1,96 @@
+/* ===================================
+   TIME CRAFT — RTL Overrides (Arabic)
+   Applied when html[dir="rtl"]
+   =================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] body {
+  font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+}
+
+/* Navbar */
+[dir="rtl"] .navbar-nav { flex-direction: row-reverse; }
+[dir="rtl"] .navbar-actions { flex-direction: row-reverse; }
+[dir="rtl"] .navbar-logo { margin-right: 0; margin-left: auto; }
+
+/* Cart Sidebar */
+[dir="rtl"] .cart-sidebar {
+  right: auto;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+[dir="rtl"] .cart-sidebar.open {
+  transform: translateX(0);
+}
+
+/* Product Cards */
+[dir="rtl"] .product-card-actions { flex-direction: row-reverse; }
+[dir="rtl"] .product-card .badge { left: auto; right: 12px; }
+
+/* Buttons with icons */
+[dir="rtl"] .btn { flex-direction: row-reverse; }
+[dir="rtl"] .btn-icon { margin-left: 0; margin-right: 8px; }
+
+/* Form elements */
+[dir="rtl"] .form-group input,
+[dir="rtl"] .form-group textarea,
+[dir="rtl"] .form-group select {
+  text-align: right;
+}
+
+/* Grid flow */
+[dir="rtl"] .hero-content { text-align: right; }
+
+/* Chat Widget */
+[dir="rtl"] .chat-widget { left: 24px; right: auto; }
+[dir="rtl"] .chat-panel { left: 24px; right: auto; }
+
+/* Footer */
+[dir="rtl"] .footer-social { flex-direction: row-reverse; }
+
+/* Breadcrumbs */
+[dir="rtl"] .breadcrumb { flex-direction: row-reverse; }
+
+/* Animations direction flip */
+[dir="rtl"] .reveal-left {
+  transform: translateX(40px);
+}
+[dir="rtl"] .reveal-left.visible {
+  transform: translateX(0);
+}
+
+[dir="rtl"] .reveal-right {
+  transform: translateX(-40px);
+}
+[dir="rtl"] .reveal-right.visible {
+  transform: translateX(0);
+}
+
+/* Spacing adjustments */
+[dir="rtl"] .gap-with-icon > *:first-child {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+/* Qty Controls */
+[dir="rtl"] .qty-controls { flex-direction: row-reverse; }
+
+/* Product Detail */
+[dir="rtl"] .product-detail-info { text-align: right; }
+[dir="rtl"] .product-thumbnails { flex-direction: row-reverse; }
+
+/* Mobile Menu */
+[dir="rtl"] .mobile-menu {
+  right: auto;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+[dir="rtl"] .mobile-menu.open {
+  transform: translateX(0);
+}

@@ -19,12 +19,12 @@
 
 **Purpose**: Project initialization, folder structure, and design system foundation
 
-- [ ] T001 Scaffold `src/` directory tree per plan.md (components/, context/, data/, pages/, hooks/, styles/)
-- [ ] T002 [P] Write `src/styles/index.css` — CSS custom properties for light/dark design tokens, global reset, typography, utility classes
-- [ ] T003 [P] Write `src/styles/animations.css` — keyframe animations (fadeIn, slideUp, shimmer, pulse, float)
-- [ ] T004 [P] Write `src/styles/rtl.css` — RTL layout overrides triggered when `html[dir=rtl]` is active
-- [ ] T005 Update `index.html` — add Google Fonts (Inter, Playfair Display), meta description, lang attribute, viewport
-- [ ] T006 Update `src/main.jsx` — wrap `<App />` with all Context providers in correct order
+- [x] T001 Scaffold `src/` directory tree per plan.md (components/, context/, data/, pages/, hooks/, styles/)
+- [x] T002 [P] Write `src/styles/index.css` — CSS custom properties for light/dark design tokens, global reset, typography, utility classes
+- [x] T003 [P] Write `src/styles/animations.css` — keyframe animations (fadeIn, slideUp, shimmer, pulse, float)
+- [x] T004 [P] Write `src/styles/rtl.css` — RTL layout overrides triggered when `html[dir=rtl]` is active
+- [x] T005 Update `index.html` — add Google Fonts (Inter, Playfair Display), meta description, lang attribute, viewport
+- [x] T006 Update `src/main.jsx` — wrap `<App />` with all Context providers in correct order
 
 **Checkpoint**: Design system and entry point ready — all pages can now be styled consistently
 
@@ -36,19 +36,19 @@
 
 **⚠️ CRITICAL**: No page or component work can begin until this phase is complete
 
-- [ ] T007 [P] Create `src/data/categories.js` — 5 category objects with id, name, nameAr, icon, image, description, descriptionAr
-- [ ] T008 [P] Create `src/data/products.js` — 25 mock watch products across 5 categories with all fields per data-model.md (price, stock, isBestSeller, isNew, rating, images, tags, etc.)
-- [ ] T009 [P] Create `src/data/testimonials.js` — 6+ user feedback objects with authorName, authorNameAr, rating, comment, commentAr, date
-- [ ] T010 [P] Create `src/data/translations.js` — complete EN/AR string map for all UI text (nav labels, buttons, page titles, form labels, error messages, empty states)
-- [ ] T011 Create `src/context/ThemeContext.jsx` — light/dark state, toggleTheme(), localStorage sync, `data-theme` attribute on `<html>`
-- [ ] T012 Create `src/context/LanguageContext.jsx` — EN/AR state, toggleLanguage(), `t(key)` translation function, `dir` attribute on `<html>`, localStorage sync
-- [ ] T013 Create `src/context/CartContext.jsx` — CartItem[] state, addItem(), removeItem(), updateQuantity(), clearCart(), cartCount, total, localStorage sync
-- [ ] T014 Create `src/context/FavoritesContext.jsx` — FavoriteItem[] state, addFavorite(), removeFavorite(), isFavorite(), favoriteCount, localStorage sync
-- [ ] T015 [P] Create `src/hooks/useCart.js` — convenience hook consuming CartContext
-- [ ] T016 [P] Create `src/hooks/useFavorites.js` — convenience hook consuming FavoritesContext
-- [ ] T017 [P] Create `src/hooks/useTheme.js` — convenience hook consuming ThemeContext
-- [ ] T018 [P] Create `src/hooks/useLanguage.js` — convenience hook consuming LanguageContext
-- [ ] T019 Update `src/App.jsx` — React Router BrowserRouter, all routes (/, /shop, /category/:id, /product/:id, /cart, /checkout, /favorites, /order-confirmation), layout wrapper with Navbar + Footer + ChatWidget
+- [x] T007 [P] Create `src/data/categories.js` — 5 category objects with id, name, nameAr, icon, image, description, descriptionAr
+- [x] T008 [P] Create `src/data/products.js` — 25 mock watch products across 5 categories with all fields per data-model.md (price, stock, isBestSeller, isNew, rating, images, tags, etc.)
+- [x] T009 [P] Create `src/data/testimonials.js` — 6+ user feedback objects with authorName, authorNameAr, rating, comment, commentAr, date
+- [x] T010 [P] Create `src/data/translations.js` — complete EN/AR string map for all UI text (nav labels, buttons, page titles, form labels, error messages, empty states)
+- [x] T011 Create `src/context/ThemeContext.jsx` — light/dark state, toggleTheme(), localStorage sync, `data-theme` attribute on `<html>`
+- [x] T012 Create `src/context/LanguageContext.jsx` — EN/AR state, toggleLanguage(), `t(key)` translation function, `dir` attribute on `<html>`, localStorage sync
+- [x] T013 Create `src/context/CartContext.jsx` — CartItem[] state, addItem(), removeItem(), updateQuantity(), clearCart(), cartCount, total, localStorage sync
+- [x] T014 Create `src/context/FavoritesContext.jsx` — FavoriteItem[] state, addFavorite(), removeFavorite(), isFavorite(), favoriteCount, localStorage sync
+- [x] T015 [P] Create `src/hooks/useCart.js` — convenience hook consuming CartContext
+- [x] T016 [P] Create `src/hooks/useFavorites.js` — convenience hook consuming FavoritesContext
+- [x] T017 [P] Create `src/hooks/useTheme.js` — convenience hook consuming ThemeContext
+- [x] T018 [P] Create `src/hooks/useLanguage.js` — convenience hook consuming LanguageContext
+- [x] T019 Update `src/App.jsx` — React Router BrowserRouter, all routes (/, /shop, /category/:id, /product/:id, /cart, /checkout, /favorites, /order-confirmation), layout wrapper with Navbar + Footer + ChatWidget
 
 **Checkpoint**: Foundation ready — all contexts, data, hooks, and routing in place. Individual pages can now be built independently
 
@@ -62,19 +62,19 @@
 
 ### Implementation for User Story 1
 
-- [ ] T020 [P] [US1] Create `src/components/ui/Badge.jsx` — reusable badge chip (Best Seller, New, Out of Stock, Sale, discount %)
-- [ ] T021 [P] [US1] Create `src/components/product/OutOfStockBadge.jsx` — overlay badge for out-of-stock products
-- [ ] T022 [P] [US1] Create `src/components/product/ProductCard.jsx` — product grid card with image, name (localized), price, rating, "Add to Cart" button (disabled if out-of-stock), heart toggle, badges
-- [ ] T023 [US1] Create `src/pages/ShopPage.jsx` — all products grid with category filter chips, sort dropdown (Price ↑↓, Rating, Newest), search input filtering by name/nameAr (depends on T022)
-- [ ] T024 [US1] Create `src/pages/CategoryPage.jsx` — category hero header + filtered product grid using categoryId URL param (depends on T022)
-- [ ] T025 [P] [US1] Create `src/components/product/ProductDetail.jsx` — image gallery with thumbnail switching, localized name/description, price with discount display, star rating, stock status, tags, Add to Cart button
-- [ ] T026 [US1] Create `src/pages/ProductPage.jsx` — page wrapper loading product by id param and rendering ProductDetail (depends on T025)
-- [ ] T027 [P] [US1] Create `src/components/cart/CartItem.jsx` — single cart row: product image, name, qty +/- controls, line price, remove icon
-- [ ] T028 [P] [US1] Create `src/components/cart/CartSummary.jsx` — subtotal, item count, "Proceed to Checkout" button
-- [ ] T029 [US1] Create `src/components/cart/CartSidebar.jsx` — slide-in drawer with CartItem list + CartSummary + empty state (depends on T027, T028)
-- [ ] T030 [US1] Create `src/pages/CartPage.jsx` — full-page cart view rendering CartItem list + CartSummary (depends on T027, T028)
-- [ ] T031 [US1] Create `src/pages/CheckoutPage.jsx` — form with Full Name, Email, Phone, Shipping Address fields; inline validation; on valid submit clear cart and navigate to /order-confirmation (depends on T013)
-- [ ] T032 [US1] Create `src/pages/OrderConfirmationPage.jsx` — displays generated order ID, item summary, "Continue Shopping" link to /
+- [x] T020 [P] [US1] Create `src/components/ui/Badge.jsx` — reusable badge chip (Best Seller, New, Out of Stock, Sale, discount %)
+- [x] T021 [P] [US1] Create `src/components/product/OutOfStockBadge.jsx` — overlay badge for out-of-stock products
+- [x] T022 [P] [US1] Create `src/components/product/ProductCard.jsx` — product grid card with image, name (localized), price, rating, "Add to Cart" button (disabled if out-of-stock), heart toggle, badges
+- [x] T023 [US1] Create `src/pages/ShopPage.jsx` — all products grid with category filter chips, sort dropdown (Price ↑↓, Rating, Newest), search input filtering by name/nameAr (depends on T022)
+- [x] T024 [US1] Create `src/pages/CategoryPage.jsx` — category hero header + filtered product grid using categoryId URL param (depends on T022)
+- [x] T025 [P] [US1] Create `src/components/product/ProductDetail.jsx` — image gallery with thumbnail switching, localized name/description, price with discount display, star rating, stock status, tags, Add to Cart button
+- [x] T026 [US1] Create `src/pages/ProductPage.jsx` — page wrapper loading product by id param and rendering ProductDetail (depends on T025)
+- [x] T027 [P] [US1] Create `src/components/cart/CartItem.jsx` — single cart row: product image, name, qty +/- controls, line price, remove icon
+- [x] T028 [P] [US1] Create `src/components/cart/CartSummary.jsx` — subtotal, item count, "Proceed to Checkout" button
+- [x] T029 [US1] Create `src/components/cart/CartSidebar.jsx` — slide-in drawer with CartItem list + CartSummary + empty state (depends on T027, T028)
+- [x] T030 [US1] Create `src/pages/CartPage.jsx` — full-page cart view rendering CartItem list + CartSummary (depends on T027, T028)
+- [x] T031 [US1] Create `src/pages/CheckoutPage.jsx` — form with Full Name, Email, Phone, Shipping Address fields; inline validation; on valid submit clear cart and navigate to /order-confirmation (depends on T013)
+- [x] T032 [US1] Create `src/pages/OrderConfirmationPage.jsx` — displays generated order ID, item summary, "Continue Shopping" link to /
 
 **Checkpoint**: Full P1 flow complete — browse → product detail → cart → checkout → confirmation all independently functional
 
@@ -88,11 +88,11 @@
 
 ### Implementation for User Story 2
 
-- [ ] T033 [P] [US2] Create `src/components/ui/ThemeToggle.jsx` — sun/moon animated icon button calling toggleTheme() from ThemeContext
-- [ ] T034 [P] [US2] Create `src/components/ui/LanguageToggle.jsx` — EN/AR pill switcher calling toggleLanguage() from LanguageContext
-- [ ] T035 [US2] Create `src/components/layout/Navbar.jsx` — logo (Time Craft brand), navigation links (localized), cart badge counter, favorites badge counter, ThemeToggle, LanguageToggle, mobile hamburger menu (depends on T033, T034)
-- [ ] T036 [US2] Verify `src/styles/rtl.css` fully covers all layout direction changes — test Navbar, product cards, forms, cart sidebar in RTL mode; fix any gaps
-- [ ] T037 [US2] Verify `src/styles/index.css` light/dark tokens cover all components — check contrast ratios in both modes; update any missing `[data-theme="dark"]` overrides
+- [x] T033 [P] [US2] Create `src/components/ui/ThemeToggle.jsx` — sun/moon animated icon button calling toggleTheme() from ThemeContext
+- [x] T034 [P] [US2] Create `src/components/ui/LanguageToggle.jsx` — EN/AR pill switcher calling toggleLanguage() from LanguageContext
+- [x] T035 [US2] Create `src/components/layout/Navbar.jsx` — logo (Time Craft brand), navigation links (localized), cart badge counter, favorites badge counter, ThemeToggle, LanguageToggle, mobile hamburger menu (depends on T033, T034)
+- [x] T036 [US2] Verify `src/styles/rtl.css` fully covers all layout direction changes — test Navbar, product cards, forms, cart sidebar in RTL mode; fix any gaps
+- [x] T037 [US2] Verify `src/styles/index.css` light/dark tokens cover all components — check contrast ratios in both modes; update any missing `[data-theme="dark"]` overrides
 
 **Checkpoint**: Language and theme toggles fully functional across all P1 pages
 
@@ -106,15 +106,15 @@
 
 ### Implementation for User Story 3
 
-- [ ] T038 [P] [US3] Create `src/components/home/AnimatedClock.jsx` — decorative SVG watch/clock with CSS animation (rotating hands)
-- [ ] T039 [P] [US3] Create `src/components/home/HeroSection.jsx` — full-width animated hero: headline (localized), subtext, CTA "Shop Now" button, AnimatedClock, fade-in + slide-up entrance animations using IntersectionObserver
-- [ ] T040 [P] [US3] Create `src/components/home/BestSellers.jsx` — horizontal scrollable row of products where isBestSeller === true, using ProductCard
-- [ ] T041 [P] [US3] Create `src/components/home/CategoryGrid.jsx` — 5 category cards in responsive grid, each linking to /category/:id, with image, icon, and localized name
-- [ ] T042 [P] [US3] Create `src/components/home/UserFeedback.jsx` — testimonials carousel with auto-play, localized names/comments, star rating display, prev/next controls
-- [ ] T043 [US3] Create `src/pages/HomePage.jsx` — assembles HeroSection, BestSellers, CategoryGrid, UserFeedback sections with scroll animation triggers (depends on T038–T042)
-- [ ] T044 [US3] Create `src/pages/FavoritesPage.jsx` — grid of favorited products using ProductCard with remove-from-favorites action; empty state with link to /shop (depends on T014, T022)
-- [ ] T045 [P] [US3] Create `src/components/layout/ChatWidget.jsx` — floating bottom-right chat bubble; open/close panel with message list, user input field, auto-reply bot with 1-2s delay simulated responses
-- [ ] T046 [P] [US3] Create `src/components/layout/Footer.jsx` — social media icons (Instagram, Facebook, Twitter, YouTube, WhatsApp), newsletter email input, quick nav links, copyright, brand tagline (localized)
+- [x] T038 [P] [US3] Create `src/components/home/AnimatedClock.jsx` — decorative SVG watch/clock with CSS animation (rotating hands)
+- [x] T039 [P] [US3] Create `src/components/home/HeroSection.jsx` — full-width animated hero: headline (localized), subtext, CTA "Shop Now" button, AnimatedClock, fade-in + slide-up entrance animations using IntersectionObserver
+- [x] T040 [P] [US3] Create `src/components/home/BestSellers.jsx` — horizontal scrollable row of products where isBestSeller === true, using ProductCard
+- [x] T041 [P] [US3] Create `src/components/home/CategoryGrid.jsx` — 5 category cards in responsive grid, each linking to /category/:id, with image, icon, and localized name
+- [x] T042 [P] [US3] Create `src/components/home/UserFeedback.jsx` — testimonials carousel with auto-play, localized names/comments, star rating display, prev/next controls
+- [x] T043 [US3] Create `src/pages/HomePage.jsx` — assembles HeroSection, BestSellers, CategoryGrid, UserFeedback sections with scroll animation triggers (depends on T038–T042)
+- [x] T044 [US3] Create `src/pages/FavoritesPage.jsx` — grid of favorited products using ProductCard with remove-from-favorites action; empty state with link to /shop (depends on T014, T022)
+- [x] T045 [P] [US3] Create `src/components/layout/ChatWidget.jsx` — floating bottom-right chat bubble; open/close panel with message list, user input field, auto-reply bot with 1-2s delay simulated responses
+- [x] T046 [P] [US3] Create `src/components/layout/Footer.jsx` — social media icons (Instagram, Facebook, Twitter, YouTube, WhatsApp), newsletter email input, quick nav links, copyright, brand tagline (localized)
 
 **Checkpoint**: All 3 user stories complete — full site functional end-to-end
 
@@ -127,9 +127,9 @@
 - [ ] T047 Polish home screen animations — ensure HeroSection entrance, card hover lifts, BestSellers shimmer, and CategoryGrid reveal all run at 60fps; optimize with `will-change` and `transform` where needed in `src/styles/animations.css`
 - [ ] T048 [P] Add scroll-triggered reveal animations using `IntersectionObserver` to BestSellers, CategoryGrid, and UserFeedback sections in `src/components/home/`
 - [ ] T049 [P] Verify all pages are fully responsive — test at 320px, 768px, 1024px, 1440px viewports; fix any layout overflow or clipping issues in `src/styles/index.css` and component files
-- [ ] T050 [P] Add 404 / Not Found page `src/pages/NotFoundPage.jsx` and catch-all route in `src/App.jsx`
+- [x] T050 [P] Add 404 / Not Found page `src/pages/NotFoundPage.jsx` and catch-all route in `src/App.jsx`
 - [ ] T051 [P] Add loading states and error boundaries — skeleton placeholders for product images, fallback UI in `src/components/ui/` 
-- [ ] T052 [P] Accessibility pass — add `aria-label` to icon buttons (cart, favorites, theme, language toggles), ensure keyboard navigation works for Navbar and ChatWidget
+- [x] T052 [P] Accessibility pass — add `aria-label` to icon buttons (cart, favorites, theme, language toggles), ensure keyboard navigation works for Navbar and ChatWidget
 - [ ] T053 Copy Time Craft logo image to `src/assets/logo.png` and reference it in `Navbar.jsx` and `Footer.jsx`
 - [ ] T054 [P] Update `index.html` — SEO meta tags (title, description, og:title, og:description), favicon reference
 - [ ] T055 Final `npm run build` and verify `dist/` output builds without errors
