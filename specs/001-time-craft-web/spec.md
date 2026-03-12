@@ -5,6 +5,11 @@
 **Status**: Draft  
 **Input**: User description: "Design and develop responsive website to buy hand watch on it and users can oreder online from it and favorite list and cart and create categories and make animation in home screen and add social links , users feedback and chats best sailer products on top create site with arabic and english(default) and switch theme light and dark brand name is : Time craft"
 
+## Clarifications
+
+### Session 2026-03-12
+- Q: How should we treat out of stock items in the catalog? → A: Show with disabled button. Items are visible but have an "Out of Stock" badge, and the buy button is disabled.
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Product Browse and Purchase (Priority: P1)
@@ -71,7 +76,7 @@ As a returning user, I want to add watches to my favorites, leave feedback, see 
 - **FR-007**: System MUST provide social media links.
 - **FR-008**: System MUST include a user feedback mechanism.
 - **FR-009**: System MUST integrate a live chat feature.
-- **FR-010**: System MUST handle product inventory/availability [NEEDS CLARIFICATION: How should we treat out of stock items? Should they be hidden from general views, or visible but with an "Out of Stock" badge and disabled buy button?]
+- **FR-010**: System MUST handle product inventory/availability by showing out-of-stock items with an "Out of Stock" badge and a disabled buy button.
 
 ### Key Entities
 
